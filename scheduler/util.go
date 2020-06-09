@@ -377,6 +377,9 @@ func tasksUpdated(jobA, jobB *structs.Job, taskGroup string) bool {
 		return true
 	}
 
+	// TODO(shoenig) detect changes to Connect services that will require
+	//  replacement. Also, document.
+
 	// Check each task
 	for _, at := range a.Tasks {
 		bt := b.LookupTask(at.Name)
