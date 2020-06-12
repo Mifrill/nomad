@@ -119,6 +119,7 @@ export default class Application extends RESTAdapter {
     return url;
   }
 
+  // FIXME is this erroneous?
   urlForUpdateRecord() {
     return this.urlForRecord(...arguments);
   }
